@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: var(--primary);
@@ -16,9 +17,73 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 10px 0px;
+
+    /* others */
+    transition: all .3s ease;
+    color: var(--secondary);
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    z-index: 9;
 }
+
+nav.scrolled {
+    background-color: var(--secondary);
+    padding: 0px 0px;
+    color: var(--primary);
+}
+
+nav img {
+    height: 50px;
+}
+
+nav * {
+    margin: 0px 5px;
+}
+
+header {
+    --current-slide: 0;
+    /* we set position relative so absolute position works properly for the buttons */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 300px;
+}
+
+.slides {
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s;
+    transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+.slide {
+    height: 100%;
+    flex: 0 0 100%;
+    background-size: cover;
+}
+
 
 section {
     border: 5px solid red;
     height: 80vh;
+}
+
+@media (min-width: 600px) {
+    nav {
+        padding: 20px 0;
+    }
+
+    nav img {
+        height: 80px;
+    }
+
+    nav * {
+        font-size: 200%;
+        margin: 0 30px;
+    }
+
+    header {
+        height: 100vh;
+    }
 }
