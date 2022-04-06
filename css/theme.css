@@ -1,0 +1,7 @@
+:root {
+    --accent: #54A93C;
+    --primary: #E3F0F9;
+    --secondary: #477C92;
+    --secondary-variant: #74AEB3;
+    --sv: var(--secondary-variant);
+}
