@@ -22,7 +22,7 @@ nav {
     /* others */
     transition: all .3s ease;
     color: var(--secondary);
-    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Amatic SC', sans-serif !important;
     font-weight: bold;
     z-index: 9;
 }
